@@ -43,10 +43,14 @@ namespace MetaRipper
         public bool DoesUseSpeedLoader;
         public bool UsesRoundType;
         public bool IsModContent;
+        public bool SpawnInTable;
 
         public bool HasSpawnerEntry;
         public string EntryPath;
         public bool IsDisplayedInMainEntry;
+
+
+        public MetadataEntry() { }
 
         public MetadataEntry(FVRObject fvrObject)
         {
@@ -80,6 +84,7 @@ namespace MetaRipper
 
             UsesRoundType = fvrObject.UsesRoundTypeFlag;
             IsModContent = fvrObject.IsModContent;
+            SpawnInTable = fvrObject.OSple;
 
             if(fvrObject.Category == FVRObject.ObjectCategory.Firearm)
             {
